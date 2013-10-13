@@ -53,9 +53,9 @@ if ($_POST["action"] == "service") {
 //this runs on page load
 if ($_POST["action"] == "pageload") {
 //increments the specified reviewID's service column by 1
+echo "pageload";
 
-
-  $query[=mysqli_query($con,"UPDATE yelp SET service=service + 1 WHERE reviewID=$reviewID  ");
+  $query=mysqli_query($con,"UPDATE yelp SET service=service + 1 WHERE reviewID=$reviewID  ");
   if($query) {
     echo "Your comment has been sent<br>";
   }

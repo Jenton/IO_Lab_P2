@@ -22,7 +22,7 @@ $(document).ready(function(){
 
   $.ajax({
     type:"post",
-    url:"phpScript.php",
+    url:"./phpScript.php",
     data:"action=food"+"&reviewID="+reviewID,
     success:function(data){
      $("#info").html(data);
@@ -53,19 +53,4 @@ $(document).ready(function(){
 
                         });
 
-  $("#button").click(function(){
-
-    var name=$("#name").val();
-    var message=$("#message").val();
-
-    $.ajax({
-      type:"post",
-      url:"process.php",
-      data:"name="+name+"&message="+message,
-      success:function(data){
-       $("#info").html(data);
-     }
-
-   });
-  });
 });
