@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+/*
   //when the page loads, make a call to the database and get the food and service tags
   $("div").each(function())
   $.ajax({
@@ -10,9 +10,7 @@ $(document).ready(function(){
      $("#info").html(data);
      //console.log(data);
    } 
- });
-
-
+ });*/
 
   // When you click the food button, this code goes
   $(".foodButton").on("click", function(){
@@ -45,7 +43,7 @@ $(document).ready(function(){
 
                           $.ajax({
                             type:"post",
-                            url:"foodButton.php",
+                            url:"phpScript.php",
                             data:"action=service"+"&reviewID="+reviewID,
                             success:function(data){
                              $("#info").html(data);
