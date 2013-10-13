@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
   //when the page loads, make a call to the database and get the food and service tags
+  $("div").each(function())
   $.ajax({
     type:"post",
     url:"phpScript.php",
-    data:"action=food"+"&reviewID="+reviewID,
+    data:"action=pageload",
     success:function(data){
      $("#info").html(data);
      //console.log(data);
